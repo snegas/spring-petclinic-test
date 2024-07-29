@@ -16,13 +16,21 @@ gradle.startParameter.excludedTaskNames += [ "checkFormatAot", "checkFormatAotTe
 
 group = 'org.springframework.samples'
 version = '3.3.0'
+// ext["tomcat.version"] = "10.1.25"
 
 java {
   sourceCompatibility = JavaVersion.VERSION_17
 }
 
 repositories {
-  mavenCentral()
+  maven {
+    url = "${artifactory_contextUrl}/petclinic-gradle-release"
+
+    credentials {
+      username = "${artifactory_user}"
+      password = "${artifactory_password}"
+    }
+  }
 }
 
 ext.webjarsFontawesomeVersion = "4.7.0"
