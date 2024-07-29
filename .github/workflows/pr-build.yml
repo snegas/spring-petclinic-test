@@ -20,8 +20,7 @@ jobs:
         env:
           GRADLE_CREDS: ${{ secrets.GRADLE_CREDS }}
         run: |
-          mkdir -p ~/.gradle/
-          echo ${GRADLE_CREDS} > ~/.gradle/gradle.properties
+          echo ${GRADLE_CREDS} > ./gradle.properties
       - name: Run build
         run: ./gradlew build
       - uses: docker/setup-buildx-action@v3
