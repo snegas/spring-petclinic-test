@@ -21,7 +21,7 @@ jobs:
           GRADLE_CREDS: ${{ secrets.GRADLE_CREDS }}
         run: |
           echo ${GRADLE_CREDS} > ./gradle.properties
-          ls -al ./gradle.properties
+          ls -al .
           pwd
       - name: Run build
         run: ./gradlew build
