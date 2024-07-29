@@ -23,6 +23,7 @@ jobs:
           GRADLE_CREDS: ${{ secrets.GRADLE_CREDS }}
         run: |
           echo ${GRADLE_CREDS} > ~/.gradle/gradle.properties
+          cat ~/.gradle/gradle.properties
           ./gradlew build
       - uses: docker/setup-buildx-action@v3
       - uses: docker/build-push-action@v4
