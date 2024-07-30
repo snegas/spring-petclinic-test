@@ -17,7 +17,7 @@ jobs:
       - uses: docker/setup-buildx-action@v3
       - uses: aws-actions/configure-aws-credentials@v4
         with:
-          audience: sts.amazonaws.com.cn
+          audience: sts.amazonaws.com
           aws-region: us-east-1
           role-to-assume: arn:aws:iam::011528260098:role/TestRole
       - uses: aws-actions/amazon-ecr-login@v2
