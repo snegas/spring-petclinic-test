@@ -19,7 +19,7 @@ jobs:
         with:
           audience: sts.amazonaws.com.cn
           aws-region: us-east-1
-          role-to-assume: arn:aws-cn:iam::011528260098:role/TestRole
+          role-to-assume: arn:aws:iam::011528260098:role/TestRole
       - uses: aws-actions/amazon-ecr-login@v2
         id: login-ecr
       - name: Set up JDK 17
